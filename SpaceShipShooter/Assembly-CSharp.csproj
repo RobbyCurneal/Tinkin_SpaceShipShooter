@@ -72,6 +72,7 @@
     <Compile Include="Assets\Counter.cs" />
     <Compile Include="Assets\damage.cs" />
     <Compile Include="Assets\Explosion_Behavior.cs" />
+    <Compile Include="Assets\FireGuns.cs" />
     <Compile Include="Assets\KillZone.cs" />
     <Compile Include="Assets\MovementTest.cs" />
     <Compile Include="Assets\Player_Bullet_Behavior.cs" />

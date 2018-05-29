@@ -9,19 +9,23 @@ public class Player1_Movement : MonoBehaviour {
     public float moveY;
     public Rigidbody2D bullet;
     public int bulletSpeed;
-    public int fireRate;
     private Rigidbody2D rigidBody;
     private int counter;
     private float rotation = 0;
     public float rotX = 0;
     public float rotY = 0;
-    
-    
+    private FireGuns fireGuns;
+    private int fireRate;
+
+
     // Use this for initialization
-	void Start () {
-        counter = fireRate;
+    void Start () {
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
-	}
+        fireGuns = gameObject.AddComponent(typeof(FireGuns)) as FireGuns;
+        initializeFireGuns();
+        fireRate = fireGuns.fireRate;
+        counter = fireRate;
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -29,7 +33,8 @@ public class Player1_Movement : MonoBehaviour {
 
         if ((counter == fireRate && Input.GetButton("Fire1")))
         {
-            fireGuns();
+            fireGuns.fireGuns();
+            counter = 0;
         }
         
         if(counter != fireRate)
@@ -48,21 +53,16 @@ public class Player1_Movement : MonoBehaviour {
 
     }
 
-    void fireGuns()
+    void initializeFireGuns()
     {
-         Rigidbody2D bulletInstance1 = Instantiate(bullet, new Vector2(transform.position.x - 0.4f, transform.position.y + 2.5f), transform.rotation) as Rigidbody2D;
-         Rigidbody2D bulletInstance2 = Instantiate(bullet, new Vector2(transform.position.x + 0.4f, transform.position.y + 2.5f), transform.rotation) as Rigidbody2D;
-
-         bulletInstance1.velocity = new Vector2(0, bulletSpeed);
-         bulletInstance2.velocity = new Vector2(0, bulletSpeed);
-
-        Physics2D.IgnoreCollision(bulletInstance1.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-        Physics2D.IgnoreCollision(bulletInstance2.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-        Physics2D.IgnoreLayerCollision(8, 9);
-        Physics2D.IgnoreLayerCollision(8, 13);
-
-
-        counter = 0;
+        FireGuns reference = gameObject.GetComponent<Ship_Constructor>().shipCore.GetComponent<FireGuns>();
+        fireGuns.fireRate = reference.fireRate;
+        fireGuns.bullet = reference.bullet;
+        fireGuns.amountOfBullets = reference.amountOfBullets;
+        fireGuns.bulletsXOffset = reference.bulletsXOffset;
+        fireGuns.bulletsYOffSet = reference.bulletsYOffSet;
+        fireGuns.bulletRotation = reference.bulletRotation;
+        fireGuns.bulletSpeed = reference.bulletSpeed;
+        fireGuns.bulletSpread = reference.bulletSpread;
     }
-
 }
