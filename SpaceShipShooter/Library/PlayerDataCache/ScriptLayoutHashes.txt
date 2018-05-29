@@ -169,6 +169,6 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TestCollision
 9fe1eb8f1b8e5b3030775c5f58f077ad Assembly-CSharp.dll:.BoundsScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MovementTest
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.QuitGame
 b73a5aa8774e69a66143bcaec14db4e0 Assembly-CSharp.dll:.CameraFollow
 68d43453ade8eb333583ae031798d994 Assembly-CSharp.dll:.ChangeRWingProperties
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.QuitGame
