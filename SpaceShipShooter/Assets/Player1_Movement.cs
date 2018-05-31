@@ -64,5 +64,6 @@ public class Player1_Movement : MonoBehaviour {
         fireGuns.bulletRotation = reference.bulletRotation;
         fireGuns.bulletSpeed = reference.bulletSpeed;
         fireGuns.bulletSpread = reference.bulletSpread;
+        fireGuns.alternating = reference.alternating;
     }
 }
