@@ -483,6 +483,18 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114518333883802028, guid: f8dfeac52fbd4cf49be1c69ed1c8b362,
+        type: 2}
+      propertyPath: lWing
+      value: 
+      objectReference: {fileID: 1426059516761430, guid: 46804ad1ba4e9e04f91d451b47da5124,
+        type: 2}
+    - target: {fileID: 114518333883802028, guid: f8dfeac52fbd4cf49be1c69ed1c8b362,
+        type: 2}
+      propertyPath: rWing
+      value: 
+      objectReference: {fileID: 1403557809619358, guid: 893582ed19622d4489f6f96501593556,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8dfeac52fbd4cf49be1c69ed1c8b362, type: 2}
   m_IsPrefabParent: 0

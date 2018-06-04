@@ -1075,6 +1075,23 @@ Prefab:
       value: 
       objectReference: {fileID: 114536593938331176, guid: c0dd5ad7baf7bf74dab55c498a977c09,
         type: 2}
+    - target: {fileID: 114467802160876318, guid: 8e178adb0f55193488c6730f6c8da4ba,
+        type: 2}
+      propertyPath: lWing
+      value: 
+      objectReference: {fileID: 1426059516761430, guid: 46804ad1ba4e9e04f91d451b47da5124,
+        type: 2}
+    - target: {fileID: 114467802160876318, guid: 8e178adb0f55193488c6730f6c8da4ba,
+        type: 2}
+      propertyPath: rWing
+      value: 
+      objectReference: {fileID: 1403557809619358, guid: 893582ed19622d4489f6f96501593556,
+        type: 2}
+    - target: {fileID: 114671662138427072, guid: 8e178adb0f55193488c6730f6c8da4ba,
+        type: 2}
+      propertyPath: playerSpeed
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e178adb0f55193488c6730f6c8da4ba, type: 2}
   m_IsPrefabParent: 0
@@ -1774,7 +1791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2fa5784047e52e41a2782f259ec041d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 25
+  playerSpeed: 20
   moveX: 0
   moveY: 0
   bullet: {fileID: 50561538313942866, guid: 287428861402eec439c03fd81a2808c8, type: 2}
@@ -1840,8 +1857,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipCore: {fileID: 1936634033355092, guid: 2a5494b2eeaf6184892a90586d382402, type: 2}
-  lWing: {fileID: 1276619242860592, guid: ca693231378da1f4b9867ca2d5071cd1, type: 2}
-  rWing: {fileID: 1996375702484326, guid: e7b7462648c876b4c9589f873cffbd95, type: 2}
+  lWing: {fileID: 1426059516761430, guid: 46804ad1ba4e9e04f91d451b47da5124, type: 2}
+  rWing: {fileID: 1403557809619358, guid: 893582ed19622d4489f6f96501593556, type: 2}
   coreChild: {fileID: 0}
   lWingChild: {fileID: 242136747}
   rWingChild: {fileID: 910719151}

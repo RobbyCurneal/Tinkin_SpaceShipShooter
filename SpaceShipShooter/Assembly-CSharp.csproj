@@ -70,6 +70,7 @@
     <Compile Include="Assets\ChangeRWingProperties.cs" />
     <Compile Include="Assets\CoreOffset.cs" />
     <Compile Include="Assets\Counter.cs" />
+    <Compile Include="Assets\CursedLegion_Wing2_Script.cs" />
     <Compile Include="Assets\damage.cs" />
     <Compile Include="Assets\Explosion_Behavior.cs" />
     <Compile Include="Assets\FireGuns.cs" />

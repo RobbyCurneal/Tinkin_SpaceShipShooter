@@ -195,15 +195,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f67fe2c7a88384388d7ee68078c8e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 5
+  fireRate: 20
   bullet: {fileID: 50561538313942866, guid: 287428861402eec439c03fd81a2808c8, type: 2}
-  amountOfBullets: 8
-  bulletsXOffset: -0.2
+  amountOfBullets: 2
+  bulletsXOffset: 0.75
   bulletsYOffSet: 1.4
-  bulletRotation: 5
+  bulletRotation: 1
   bulletSpeed: 20
-  bulletSpread: 8
-  alternating: 1
+  bulletSpread: 64
+  alternating: 0
 --- !u!212 &212904156140577516
 SpriteRenderer:
   m_ObjectHideFlags: 1

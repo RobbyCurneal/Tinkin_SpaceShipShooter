@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 1062169835156650, guid: c0f82ec3a9d650a41a21d1913ffdf504, type: 2}
-  Damage: 50
+  Damage: 100
 --- !u!212 &212295936864984566
 SpriteRenderer:
   m_ObjectHideFlags: 1
