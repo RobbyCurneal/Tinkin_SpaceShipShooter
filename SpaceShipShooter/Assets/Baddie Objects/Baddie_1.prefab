@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipSpeed: 5
-  fire_rate: 60
+  fire_rate: 90
   bulletSpeed: 20
   bullet: {fileID: 50161483260263058, guid: d2762ac11fb22334596fb6e15536503c, type: 2}
 --- !u!114 &114718910912958558
