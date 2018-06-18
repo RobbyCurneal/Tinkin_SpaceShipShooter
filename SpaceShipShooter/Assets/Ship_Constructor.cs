@@ -10,6 +10,7 @@ public class Ship_Constructor : MonoBehaviour {
     public GameObject lWingChild;
     public GameObject rWingChild;
     WingAbilityScript wingAbilities;
+    public GameObject wingCooldown;
 
     // Use this for initialization
     void Start(){
@@ -46,5 +47,7 @@ public class Ship_Constructor : MonoBehaviour {
         wingAbilities.coolsOffGuns = reference.coolsOffGuns;
         wingAbilities.restoresHealth = reference.restoresHealth;
         wingAbilities.healthPrecentageRestored = reference.healthPrecentageRestored;
+        wingAbilities.Icon = reference.Icon;
+        wingAbilities.cooldown = reference.cooldown;
     }
 }

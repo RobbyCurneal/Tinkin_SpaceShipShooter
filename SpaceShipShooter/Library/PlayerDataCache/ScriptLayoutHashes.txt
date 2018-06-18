@@ -6,7 +6,7 @@ Assets/Scenes/TitleScreen.unity
 Assets/Scenes/TestLevel.unity
 SceneListEnd?
 6b1ea6765dc90c8bfce972efd96dd070 Assembly-CSharp.dll:.Background_1_Behavior
-2145774b469312843dc60287d6258c8e Assembly-CSharp.dll:.Ship_Constructor
+3c96010f83e1ebdf582c0af5405f9abd Assembly-CSharp.dll:.Ship_Constructor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 cf455f7a806648c6ed4c7d3e3f8a0e03 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 13bdb7c23815c33a33b37b0ba8dd39be UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -128,7 +128,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 9982fac15dcd9d11232d51b39bedaef0 Assembly-CSharp.dll:.Baddie_1_Bullet_Behavior
 ff702e68d884aa71e7d94fb4588f918b Assembly-CSharp.dll:.Baddie_1_Behavior
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CursedLegion_Core_1_Script
-c087f2320306b96872e01c5a3248ac94 Assembly-CSharp.dll:.WingAbilityScript
+f6c99834b44e3739967320389c04080a Assembly-CSharp.dll:.WingAbilityScript
 7de1bc3f672e59336d3d74c1c60a7af7 Assembly-CSharp.dll:.ChangeCoreProperties
 6789f5aaaf3ecae19c915f5132684920 Assembly-CSharp.dll:.SpawnerMovement
 ab4ef94a78819cc95d340c535952306b Assembly-CSharp.dll:.Counter

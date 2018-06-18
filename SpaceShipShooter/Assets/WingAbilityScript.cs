@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WingAbilityScript : MonoBehaviour {
     public GameObject leftWing;
@@ -22,10 +23,23 @@ public class WingAbilityScript : MonoBehaviour {
     public bool coolsOffGuns;
     public bool restoresHealth;
     public int healthPrecentageRestored;
+    public Sprite Icon;
+    public int cooldown;
+    public GameObject coolDownIndicator;
+
+    private int deathCooldown;
+    private int buttonCooldown;
+    private int droneCooldown;
 
     // Use this for initialization
     void Start () {
-		
+        coolDownIndicator = gameObject.GetComponent<Ship_Constructor>().wingCooldown;
+        coolDownIndicator.transform.Find("Fill Area").GetComponentInChildren<Image>().sprite = Icon;
+        coolDownIndicator.transform.Find("Background").GetComponent<Image>().sprite = Icon;
+        if (deathTrigger)
+        {
+            deathCooldown = cooldown;
+        }
 	}
 	
 	// Update is called once per frame
@@ -43,6 +57,15 @@ public class WingAbilityScript : MonoBehaviour {
             }
 
         }
+        if(deathCooldown > 0 && deathCooldown != cooldown)
+        {
+            deathCooldown++;
+            coolDownIndicator.GetComponent<Slider>().value = (float)deathCooldown / cooldown;
+        }
+        if(deathCooldown == cooldown)
+        {
+            deathTrigger = true;
+        }
 	}
 
     bool IsTriggered()
@@ -50,6 +73,7 @@ public class WingAbilityScript : MonoBehaviour {
         if (deathTrigger && gameObject.GetComponent<Player_Health>().health <= 0)
         {
             deathTrigger = !deathTrigger;
+            deathCooldown = 1;
             Debug.Log("Triggered");
             return true;
         }

@@ -159,7 +159,7 @@ MonoBehaviour:
   createsObjectInLine: 0
   createObjectsInCircle: 0
   deathTrigger: 1
-  fireShotsAllAtOnce: 0
+  fireShotsAllAtOnce: 1
   buttonTrigger: 0
   droneDeathTrigger: 0
   paysHealth: 0
@@ -167,6 +167,9 @@ MonoBehaviour:
   coolsOffGuns: 0
   restoresHealth: 1
   healthPrecentageRestored: 50
+  Icon: {fileID: 21300000, guid: d1db6de0ce0896044bae642742b7aade, type: 3}
+  cooldown: 3600
+  coolDownIndicator: {fileID: 0}
 --- !u!114 &114508300304757088
 MonoBehaviour:
   m_ObjectHideFlags: 1
