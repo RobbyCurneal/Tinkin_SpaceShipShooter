@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Robby/Desktop/SpaceShipShooter/SpaceShipShooter.exe
+B:/SpaceShipShooter/SpaceShipShooter/SpaceShipShooter/SpaceShipShooter.exe
 SceneListBegin?
 Assets/Scenes/TitleScreen.unity
 Assets/Scenes/TestLevel.unity
