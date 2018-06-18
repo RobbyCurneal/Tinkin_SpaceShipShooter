@@ -489,8 +489,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.000030517578, y: 0.07999992}
+  m_SizeDelta: {x: -0.000061035, y: 0.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &511046378
 MonoBehaviour:
@@ -504,14 +504,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.31168842, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.2075102, g: 0.6698113, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f0129cec854045b4ca1607ea4d1124ff, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ebcda73f90795b418eaad0c938de8d2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -700,7 +700,7 @@ RectTransform:
   m_Children:
   - {fileID: 966331688}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -916,8 +916,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.0025634766, y: 0}
+  m_SizeDelta: {x: 0.0050049, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &966331687
 GameObject:
@@ -950,10 +950,10 @@ RectTransform:
   m_Father: {fileID: 821896509}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.26282814, y: 0.062305555}
-  m_AnchorMax: {x: 0.73600006, y: 0.08569445}
-  m_AnchoredPosition: {x: 0.19000244, y: 2.1500244}
-  m_SizeDelta: {x: 3.63, y: 33.5}
+  m_AnchorMin: {x: 0.26282814, y: 0.004194446}
+  m_AnchorMax: {x: 0.8283907, y: 0.07630556}
+  m_AnchoredPosition: {x: -116.76001, y: 27.73999}
+  m_SizeDelta: {x: -724.78, y: -55.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &966331689
 MonoBehaviour:
@@ -1079,18 +1079,18 @@ Prefab:
         type: 2}
       propertyPath: lWing
       value: 
-      objectReference: {fileID: 1426059516761430, guid: 46804ad1ba4e9e04f91d451b47da5124,
+      objectReference: {fileID: 1276619242860592, guid: ca693231378da1f4b9867ca2d5071cd1,
         type: 2}
     - target: {fileID: 114467802160876318, guid: 8e178adb0f55193488c6730f6c8da4ba,
         type: 2}
       propertyPath: rWing
       value: 
-      objectReference: {fileID: 1403557809619358, guid: 893582ed19622d4489f6f96501593556,
+      objectReference: {fileID: 1996375702484326, guid: e7b7462648c876b4c9589f873cffbd95,
         type: 2}
     - target: {fileID: 114671662138427072, guid: 8e178adb0f55193488c6730f6c8da4ba,
         type: 2}
       propertyPath: playerSpeed
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e178adb0f55193488c6730f6c8da4ba, type: 2}
@@ -1199,35 +1199,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1509276866
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1509276867}
-  m_Layer: 5
-  m_Name: HUD
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1509276867
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1509276866}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.823574, y: -1.1849314, z: -0.5629004}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1614365406
 GameObject:
@@ -1371,8 +1343,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.000030517578, y: 0}
+  m_SizeDelta: {x: 0.010071, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1620326627
 MonoBehaviour:
@@ -1386,14 +1358,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.06779671, a: 1}
+  m_Color: {r: 0.6226415, g: 0, b: 0.041509394, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f0129cec854045b4ca1607ea4d1124ff, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ebcda73f90795b418eaad0c938de8d2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1791,13 +1763,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2fa5784047e52e41a2782f259ec041d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 20
+  playerSpeed: 10
   moveX: 0
   moveY: 0
-  bullet: {fileID: 50561538313942866, guid: 287428861402eec439c03fd81a2808c8, type: 2}
-  bulletSpeed: 25
-  rotX: 0
-  rotY: 0
 --- !u!212 &2137405434
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1857,8 +1825,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipCore: {fileID: 1936634033355092, guid: 2a5494b2eeaf6184892a90586d382402, type: 2}
-  lWing: {fileID: 1426059516761430, guid: 46804ad1ba4e9e04f91d451b47da5124, type: 2}
-  rWing: {fileID: 1403557809619358, guid: 893582ed19622d4489f6f96501593556, type: 2}
+  lWing: {fileID: 1276619242860592, guid: ca693231378da1f4b9867ca2d5071cd1, type: 2}
+  rWing: {fileID: 1996375702484326, guid: e7b7462648c876b4c9589f873cffbd95, type: 2}
   coreChild: {fileID: 0}
   lWingChild: {fileID: 242136747}
   rWingChild: {fileID: 910719151}

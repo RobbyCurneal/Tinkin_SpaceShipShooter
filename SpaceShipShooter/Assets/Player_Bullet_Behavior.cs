@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Player_Bullet_Behavior : MonoBehaviour {
     public GameObject explosion;
+    public bool explodes;
     public int Damage = 50;
+    private GameObject explosionInstance;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +23,9 @@ public class Player_Bullet_Behavior : MonoBehaviour {
         if(collision.collider.GetComponent<BaddieHealth>() != null)
         collision.collider.GetComponent<BaddieHealth>().Health -= Damage;
 
-        GameObject explosionInstance = Instantiate(explosion, new Vector2(transform.position.x, transform.position.y), transform.rotation) as GameObject;
+        if(explodes)
+            explosionInstance = Instantiate(explosion, new Vector2(transform.position.x, transform.position.y), transform.rotation) as GameObject;
+
         Destroy(gameObject);
     }
 }

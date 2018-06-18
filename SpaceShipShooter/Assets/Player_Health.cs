@@ -19,10 +19,6 @@ public class Player_Health : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         healthBar.value = health / maxHealth;
-        if(health <= 0)
-        {
-            Die();
-        }
 	}
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -33,7 +29,7 @@ public class Player_Health : MonoBehaviour {
         }
     }
 
-    void Die()
+    public void Die()
     {
         Destroy(gameObject);
         Button continueButton = Instantiate(restartButton, canvas.transform) as Button;

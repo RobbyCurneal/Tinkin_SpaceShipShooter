@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 68447965568676734}
   - component: {fileID: 114262685684294014}
   - component: {fileID: 114878481596291258}
+  - component: {fileID: 114655149911362272}
   m_Layer: 10
   m_Name: CursedLegion_Core_1
   m_TagString: Enemy
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1936634033355092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -84.499374, y: -1.6712339, z: 0}
+  m_LocalPosition: {x: 10.42, y: -33.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -184,6 +185,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XOffset: 0
   YOffset: 0.2
+--- !u!114 &114655149911362272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1936634033355092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d2c66bc2b33704e88cb7d733a8eb88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  changesSpeedWhenFiring: 0
+  firingSpeed: 5
 --- !u!114 &114878481596291258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -195,15 +210,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f67fe2c7a88384388d7ee68078c8e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 20
+  fireRate: 5
   bullet: {fileID: 50561538313942866, guid: 287428861402eec439c03fd81a2808c8, type: 2}
-  amountOfBullets: 2
-  bulletsXOffset: 0.75
-  bulletsYOffSet: 1.4
-  bulletRotation: 1
-  bulletSpeed: 20
-  bulletSpread: 64
-  alternating: 0
+  amountOfBullets: 6
+  bulletsXOffset: -0.3
+  bulletsYOffSet: 2
+  bulletRotation: 5
+  bulletSpeed: 30
+  bulletSpread: 10
+  alternating: 1
+  bulletPerFire: 1
 --- !u!212 &212904156140577516
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50065669874013744}
   - component: {fileID: 68117654255135742}
   - component: {fileID: 114508300304757088}
+  - component: {fileID: 114213742401818116}
   m_Layer: 0
   m_Name: CursedLegion_RWing_1
   m_TagString: Untagged
@@ -136,6 +137,36 @@ EdgeCollider2D:
   - {x: -1.0422516, y: -1.0052996}
   - {x: -1.8745575, y: -1.0083408}
   - {x: -1.8748093, y: 1.0756893}
+--- !u!114 &114213742401818116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1996375702484326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd186da67ed5a284e9c0f40f802f31a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftWing: {fileID: 0}
+  rightWing: {fileID: 0}
+  createsObject: 0
+  objectCreated: {fileID: 0}
+  amountOfObjects: 0
+  objectXOffset: 0
+  objectYOffset: 0
+  createsObjectAtPosition: 0
+  createsObjectInLine: 0
+  createObjectsInCircle: 0
+  deathTrigger: 1
+  fireShotsAllAtOnce: 0
+  buttonTrigger: 0
+  droneDeathTrigger: 0
+  paysHealth: 0
+  healthPaid: 0
+  coolsOffGuns: 0
+  restoresHealth: 1
+  healthPrecentageRestored: 50
 --- !u!114 &114508300304757088
 MonoBehaviour:
   m_ObjectHideFlags: 1

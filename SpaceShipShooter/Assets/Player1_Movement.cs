@@ -7,15 +7,11 @@ public class Player1_Movement : MonoBehaviour {
     public int playerSpeed = 25;
     public float moveX;
     public float moveY;
-    public Rigidbody2D bullet;
-    public int bulletSpeed;
     private Rigidbody2D rigidBody;
     private int counter;
-    private float rotation = 0;
-    public float rotX = 0;
-    public float rotY = 0;
     private FireGuns fireGuns;
     private int fireRate;
+    private otherCoreProperties coreProperties;
 
 
     // Use this for initialization
@@ -25,6 +21,8 @@ public class Player1_Movement : MonoBehaviour {
         initializeFireGuns();
         fireRate = fireGuns.fireRate;
         counter = fireRate;
+        coreProperties = gameObject.AddComponent(typeof(otherCoreProperties)) as otherCoreProperties;
+        initializeCoreProperties();
     }
 	
 	// Update is called once per frame
@@ -65,5 +63,13 @@ public class Player1_Movement : MonoBehaviour {
         fireGuns.bulletSpeed = reference.bulletSpeed;
         fireGuns.bulletSpread = reference.bulletSpread;
         fireGuns.alternating = reference.alternating;
+        fireGuns.bulletPerFire = reference.bulletPerFire;
+    }
+    void initializeCoreProperties()
+    {
+        otherCoreProperties reference = gameObject.GetComponent<Ship_Constructor>().shipCore.GetComponent<otherCoreProperties>();
+        coreProperties.speed = reference.speed;
+        coreProperties.changesSpeedWhenFiring = reference.changesSpeedWhenFiring;
+        coreProperties.firingSpeed = reference.firingSpeed;
     }
 }

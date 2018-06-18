@@ -70,12 +70,14 @@
     <Compile Include="Assets\ChangeRWingProperties.cs" />
     <Compile Include="Assets\CoreOffset.cs" />
     <Compile Include="Assets\Counter.cs" />
+    <Compile Include="Assets\CursedLegion_Core_1_Script.cs" />
     <Compile Include="Assets\CursedLegion_Wing2_Script.cs" />
     <Compile Include="Assets\damage.cs" />
     <Compile Include="Assets\Explosion_Behavior.cs" />
     <Compile Include="Assets\FireGuns.cs" />
     <Compile Include="Assets\KillZone.cs" />
     <Compile Include="Assets\MovementTest.cs" />
+    <Compile Include="Assets\otherCoreProperties.cs" />
     <Compile Include="Assets\Player_Bullet_Behavior.cs" />
     <Compile Include="Assets\Player_Health.cs" />
     <Compile Include="Assets\Player1_Movement.cs" />
@@ -86,6 +88,7 @@
     <Compile Include="Assets\SpawnerMovement.cs" />
     <Compile Include="Assets\StartGame.cs" />
     <Compile Include="Assets\TestCollision.cs" />
+    <Compile Include="Assets\WingAbilityScript.cs" />
     <Compile Include="Assets\WingOffset.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>B:/SpaceShipShooter/SpaceShipShooter/SpaceShipShooter/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
