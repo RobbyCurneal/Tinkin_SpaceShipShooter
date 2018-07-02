@@ -13,8 +13,41 @@ public class FireGuns : MonoBehaviour {
     public int bulletSpread;
     public bool alternating;
     public int bulletPerFire;
+    public int counterStart;
+    public int burstFireAmount = 1;
+    public int burstFireDelay;
+    public float bulletXSpawn;
+    public float bulletYSpawn;
+
+    private int burstCounter = 1;
     private float offSetMultiplyer = 0.5f;
     private int j = 0;
+    private int counter;
+
+    private void Awake()
+    {
+        counter = counterStart;
+    }
+
+    private void FixedUpdate()
+    {
+        if (Input.GetButton("Fire1"))
+            counter++;
+        if(counter == fireRate)
+        {
+            fireGuns();
+            if (burstFireAmount > 1)
+            {
+                counter = fireRate - burstFireDelay;
+                burstFireAmount--;
+            }
+            else
+            {
+                counter = 0;
+                burstCounter = burstFireAmount;
+            }
+        }
+    }
 
     public void fireGuns()
     {
@@ -24,16 +57,17 @@ public class FireGuns : MonoBehaviour {
             {
                 if (amountOfBullets % 2 != 0 && i == 0)
                 {
-                    Rigidbody2D bulletInstance = Instantiate(bullet, new Vector2(transform.position.x, transform.position.y + bulletsYOffSet), transform.rotation) as Rigidbody2D;
+                    Rigidbody2D bulletInstance = Instantiate(bullet, new Vector2(transform.position.x + bulletXSpawn, transform.position.y + bulletsYOffSet + bulletYSpawn), transform.rotation) as Rigidbody2D;
                     bulletInstance.velocity = new Vector2(0, bulletSpeed);
                     Physics2D.IgnoreLayerCollision(8, 8);
                     Physics2D.IgnoreLayerCollision(8, 9);
                     Physics2D.IgnoreLayerCollision(8, 13);
                     offSetMultiplyer = 1;
+                    Debug.Log("Made bullet here");
                 }
                 else if (i % 2 == 0)
                 {
-                    Rigidbody2D bulletInstance = Instantiate(bullet, new Vector2(transform.position.x - (bulletsXOffset * offSetMultiplyer), transform.position.y + bulletsYOffSet), new Quaternion(0, 0, 0, 0)) as Rigidbody2D;
+                    Rigidbody2D bulletInstance = Instantiate(bullet, new Vector2((transform.position.x + bulletXSpawn) - (bulletsXOffset * offSetMultiplyer), transform.position.y + bulletsYOffSet + bulletYSpawn), new Quaternion(0, 0, 0, 0)) as Rigidbody2D;
                     bulletInstance.rotation = bulletRotation * offSetMultiplyer;
                     bulletInstance.velocity = new Vector2((bulletSpeed / bulletSpread) * -offSetMultiplyer, bulletSpeed - (bulletSpeed / bulletSpread) * offSetMultiplyer);
                     Physics2D.IgnoreLayerCollision(8, 8);
@@ -43,10 +77,11 @@ public class FireGuns : MonoBehaviour {
                     {
                         offSetMultiplyer++;
                     }
+                    Debug.Log("Made bullet there");
                 }
                 else if (i % 2 != 0)
                 {
-                    Rigidbody2D bulletInstance = Instantiate(bullet, new Vector2(transform.position.x + (bulletsXOffset * offSetMultiplyer), transform.position.y + bulletsYOffSet), new Quaternion(0, 0, 0, 0)) as Rigidbody2D;
+                    Rigidbody2D bulletInstance = Instantiate(bullet, new Vector2((transform.position.x + bulletXSpawn) + (bulletsXOffset * offSetMultiplyer), transform.position.y + bulletsYOffSet + bulletYSpawn), new Quaternion(0, 0, 0, 0)) as Rigidbody2D;
                     bulletInstance.rotation = -bulletRotation * offSetMultiplyer;
                     bulletInstance.velocity = new Vector2((bulletSpeed / bulletSpread) * offSetMultiplyer, bulletSpeed - (bulletSpeed / bulletSpread) * offSetMultiplyer);
                     Physics2D.IgnoreLayerCollision(8, 8);
@@ -56,6 +91,7 @@ public class FireGuns : MonoBehaviour {
                     {
                         offSetMultiplyer++;
                     }
+                    Debug.Log("Made bullet in here");
                 }
             }
             offSetMultiplyer = 0.5f;
@@ -67,7 +103,7 @@ public class FireGuns : MonoBehaviour {
             {
                 if (amountOfBullets % 2 != 0 && j == 0)
                 {
-                    Rigidbody2D bulletInstance = Instantiate(bullet, new Vector2(transform.position.x, transform.position.y + bulletsYOffSet), transform.rotation) as Rigidbody2D;
+                    Rigidbody2D bulletInstance = Instantiate(bullet, new Vector2(transform.position.x + bulletXSpawn, transform.position.y + bulletsYOffSet + bulletYSpawn), transform.rotation) as Rigidbody2D;
                     bulletInstance.velocity = new Vector2(0, bulletSpeed);
                     Physics2D.IgnoreLayerCollision(8, 8);
                     Physics2D.IgnoreLayerCollision(8, 9);
@@ -77,7 +113,7 @@ public class FireGuns : MonoBehaviour {
                 }
                 else if (j % 2 == 0)
                 {
-                    Rigidbody2D bulletInstance = Instantiate(bullet, new Vector2(transform.position.x - (bulletsXOffset * offSetMultiplyer), transform.position.y + bulletsYOffSet), new Quaternion(0, 0, 0, 0)) as Rigidbody2D;
+                    Rigidbody2D bulletInstance = Instantiate(bullet, new Vector2((transform.position.x + bulletXSpawn) - (bulletsXOffset * offSetMultiplyer), transform.position.y + bulletsYOffSet + bulletYSpawn), new Quaternion(0, 0, 0, 0)) as Rigidbody2D;
                     bulletInstance.rotation = bulletRotation * offSetMultiplyer;
                     bulletInstance.velocity = new Vector2((bulletSpeed / bulletSpread) * -offSetMultiplyer, bulletSpeed - (bulletSpeed / bulletSpread) * offSetMultiplyer);
                     Physics2D.IgnoreLayerCollision(8, 8);
@@ -91,7 +127,7 @@ public class FireGuns : MonoBehaviour {
                 }
                 else if (j % 2 != 0)
                 {
-                    Rigidbody2D bulletInstance = Instantiate(bullet, new Vector2(transform.position.x + (bulletsXOffset * offSetMultiplyer), transform.position.y + bulletsYOffSet), new Quaternion(0, 0, 0, 0)) as Rigidbody2D;
+                    Rigidbody2D bulletInstance = Instantiate(bullet, new Vector2((transform.position.x + bulletXSpawn) + (bulletsXOffset * offSetMultiplyer), transform.position.y + bulletsYOffSet + bulletYSpawn), new Quaternion(0, 0, 0, 0)) as Rigidbody2D;
                     bulletInstance.rotation = -bulletRotation * offSetMultiplyer;
                     bulletInstance.velocity = new Vector2((bulletSpeed / bulletSpread) * offSetMultiplyer, bulletSpeed - (bulletSpeed / bulletSpread) * offSetMultiplyer);
                     Physics2D.IgnoreLayerCollision(8, 8);

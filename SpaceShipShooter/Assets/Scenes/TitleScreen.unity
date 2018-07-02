@@ -861,7 +861,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: V 0.1.3
+  m_Text: V 0.1.4
 --- !u!222 &1325978283
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1118,8 +1118,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Movement \nWASD or left joystick\n\nFire Main Weapons\nLeft Mouse Click
-    or B Button"
+  m_Text: "Movement \nWASD or left joystick\n\nFire Main Weapons\nSpacebar or B Button"
 --- !u!222 &1551997642
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1389,21 +1388,23 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '**VERSION 0.1.3**
+  m_Text: '**V. 0.1.4**
 
 
-    - Began implementation of wing abilities. this will play a bigger role when ship
-    cutomization is added. When more are added they will most likely be triggered
-    by right click, or the right bumper
+    -Made weapons more robust, allowing for even more diverse types of weapons
 
 
-    - current wing ability is set to revive your ship with 50% health upon death
+    -Changed main weapon
 
 
-    -changed weapon to shotgun-style weapon that fires single shots in rapid succession
-    in a wide spread
+    -Fixed an issue with keyboard and mouse input that made the ship difficult to
+    control
 
-'
+
+    -changed primary fire button to Spacebar for KB+M users
+
+
+    -Fixed an issue causing the UI to not look correct in certain resolutions'
 --- !u!222 &1883603753
 CanvasRenderer:
   m_ObjectHideFlags: 0

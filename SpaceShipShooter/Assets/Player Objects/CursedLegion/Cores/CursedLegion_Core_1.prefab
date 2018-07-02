@@ -23,11 +23,13 @@ GameObject:
   - component: {fileID: 50260415051544034}
   - component: {fileID: 68447965568676734}
   - component: {fileID: 114262685684294014}
-  - component: {fileID: 114878481596291258}
   - component: {fileID: 114655149911362272}
-  m_Layer: 10
+  - component: {fileID: 114431848108957562}
+  - component: {fileID: 114808937033944540}
+  - component: {fileID: 114477346609482740}
+  m_Layer: 13
   m_Name: CursedLegion_Core_1
-  m_TagString: Enemy
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,6 +187,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XOffset: 0
   YOffset: 0.2
+--- !u!114 &114431848108957562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1936634033355092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f67fe2c7a88384388d7ee68078c8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 10
+  bullet: {fileID: 50561538313942866, guid: 287428861402eec439c03fd81a2808c8, type: 2}
+  amountOfBullets: 1
+  bulletsXOffset: 1
+  bulletsYOffSet: 1
+  bulletRotation: 0
+  bulletSpeed: 50
+  bulletSpread: 0
+  alternating: 0
+  bulletPerFire: 1
+  counterStart: 0
+  burstFireAmount: 0
+  burstFireDelay: 0
+  bulletXSpawn: 0
+  bulletYSpawn: 0
+--- !u!114 &114477346609482740
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1936634033355092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f67fe2c7a88384388d7ee68078c8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 8
+  bullet: {fileID: 50561538313942866, guid: 287428861402eec439c03fd81a2808c8, type: 2}
+  amountOfBullets: 4
+  bulletsXOffset: 0.1
+  bulletsYOffSet: 1
+  bulletRotation: 10
+  bulletSpeed: 25
+  bulletSpread: 8
+  alternating: 1
+  bulletPerFire: 1
+  counterStart: 0
+  burstFireAmount: 1
+  burstFireDelay: 0
+  bulletXSpawn: 0
+  bulletYSpawn: 0
 --- !u!114 &114655149911362272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -199,7 +253,7 @@ MonoBehaviour:
   speed: 20
   changesSpeedWhenFiring: 0
   firingSpeed: 5
---- !u!114 &114878481596291258
+--- !u!114 &114808937033944540
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -210,16 +264,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f67fe2c7a88384388d7ee68078c8e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 5
+  fireRate: 160
   bullet: {fileID: 50561538313942866, guid: 287428861402eec439c03fd81a2808c8, type: 2}
-  amountOfBullets: 6
-  bulletsXOffset: -0.3
-  bulletsYOffSet: 2
+  amountOfBullets: 8
+  bulletsXOffset: 0.5
+  bulletsYOffSet: 1
   bulletRotation: 5
-  bulletSpeed: 30
-  bulletSpread: 10
-  alternating: 1
-  bulletPerFire: 1
+  bulletSpeed: 20
+  bulletSpread: 16
+  alternating: 0
+  bulletPerFire: 8
+  counterStart: 0
+  burstFireAmount: 1
+  burstFireDelay: 0
+  bulletXSpawn: 0
+  bulletYSpawn: 0
 --- !u!212 &212904156140577516
 SpriteRenderer:
   m_ObjectHideFlags: 1

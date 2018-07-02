@@ -1227,7 +1227,7 @@ Prefab:
     - target: {fileID: 114671662138427072, guid: 8e178adb0f55193488c6730f6c8da4ba,
         type: 2}
       propertyPath: playerSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114467802160876318, guid: 8e178adb0f55193488c6730f6c8da4ba,
         type: 2}
@@ -2023,7 +2023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2fa5784047e52e41a2782f259ec041d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 10
+  playerSpeed: 20
   moveX: 0
   moveY: 0
 --- !u!212 &2137405434

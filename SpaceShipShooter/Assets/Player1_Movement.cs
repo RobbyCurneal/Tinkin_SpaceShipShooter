@@ -8,63 +8,35 @@ public class Player1_Movement : MonoBehaviour {
     public float moveX;
     public float moveY;
     private Rigidbody2D rigidBody;
-    private int counter;
-    private FireGuns fireGuns;
-    private int fireRate;
+    private List<int> counter = new List<int>();
+    private List<FireGuns> fireGuns  = new List<FireGuns>();
+    private List<int> fireRate = new List<int>();
     private otherCoreProperties coreProperties;
+    private int amountOfGuns = 0;
 
 
     // Use this for initialization
-    void Start () {
+    void Start() {
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
-        fireGuns = gameObject.AddComponent(typeof(FireGuns)) as FireGuns;
-        initializeFireGuns();
-        fireRate = fireGuns.fireRate;
-        counter = fireRate;
+        
         coreProperties = gameObject.AddComponent(typeof(otherCoreProperties)) as otherCoreProperties;
         initializeCoreProperties();
     }
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-        playerMove();
 
-        if ((counter == fireRate && Input.GetButton("Fire1")))
-        {
-            fireGuns.fireGuns();
-            counter = 0;
-        }
-        
-        if(counter != fireRate)
-        {
-            counter++;
-        }
+    // Update is called once per frame
+    void FixedUpdate() {
+        playerMove();
 	}
 
     void playerMove()
     {
         moveX = Input.GetAxis("Horizontal");
         moveY = Input.GetAxis("Vertical");
-
-        
         rigidBody.velocity = new Vector2(moveX * playerSpeed, moveY * playerSpeed);
+        Debug.Log("Horiz: " + moveX + " Vert: " + moveY);
 
     }
 
-    void initializeFireGuns()
-    {
-        FireGuns reference = gameObject.GetComponent<Ship_Constructor>().shipCore.GetComponent<FireGuns>();
-        fireGuns.fireRate = reference.fireRate;
-        fireGuns.bullet = reference.bullet;
-        fireGuns.amountOfBullets = reference.amountOfBullets;
-        fireGuns.bulletsXOffset = reference.bulletsXOffset;
-        fireGuns.bulletsYOffSet = reference.bulletsYOffSet;
-        fireGuns.bulletRotation = reference.bulletRotation;
-        fireGuns.bulletSpeed = reference.bulletSpeed;
-        fireGuns.bulletSpread = reference.bulletSpread;
-        fireGuns.alternating = reference.alternating;
-        fireGuns.bulletPerFire = reference.bulletPerFire;
-    }
     void initializeCoreProperties()
     {
         otherCoreProperties reference = gameObject.GetComponent<Ship_Constructor>().shipCore.GetComponent<otherCoreProperties>();

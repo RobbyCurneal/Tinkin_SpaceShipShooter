@@ -6,11 +6,14 @@ public class Ship_Constructor : MonoBehaviour {
     public GameObject shipCore;
     public GameObject lWing;
     public GameObject rWing;
-    public GameObject coreChild;
     public GameObject lWingChild;
     public GameObject rWingChild;
-    WingAbilityScript wingAbilities;
+    private WingAbilityScript wingAbilities;
     public GameObject wingCooldown;
+
+    private FireGuns guns;
+    private FireGuns reference;
+    private GameObject coreClone;
 
     // Use this for initialization
     void Start(){
@@ -19,6 +22,13 @@ public class Ship_Constructor : MonoBehaviour {
         gameObject.GetComponent<SpriteRenderer>().sprite = shipCore.GetComponent<SpriteRenderer>().sprite;
         wingAbilities = gameObject.AddComponent(typeof(WingAbilityScript)) as WingAbilityScript;
         initializeWingAbility();
+
+        coreClone = Instantiate(shipCore);
+        while(coreClone.GetComponent<FireGuns>() != null)
+        {
+            initializeGuns();
+        }
+        Destroy(coreClone);
     }
 	
 	// Update is called once per frame
@@ -49,5 +59,27 @@ public class Ship_Constructor : MonoBehaviour {
         wingAbilities.healthPrecentageRestored = reference.healthPrecentageRestored;
         wingAbilities.Icon = reference.Icon;
         wingAbilities.cooldown = reference.cooldown;
+    }
+
+    void initializeGuns()
+    {
+        guns = gameObject.AddComponent<FireGuns>();
+        reference = coreClone.GetComponent<FireGuns>();
+        guns.fireRate = reference.fireRate;
+        guns.bullet = reference.bullet;
+        guns.amountOfBullets = reference.amountOfBullets;
+        guns.bulletsXOffset = reference.bulletsXOffset;
+        guns.bulletsYOffSet = reference.bulletsYOffSet;
+        guns.bulletRotation = reference.bulletRotation;
+        guns.bulletSpeed = reference.bulletSpeed;
+        guns.bulletSpread = reference.bulletSpread;
+        guns.alternating = reference.alternating;
+        guns.bulletPerFire = reference.bulletPerFire;
+        guns.counterStart = reference.counterStart;
+        guns.burstFireAmount = reference.burstFireAmount;
+        guns.burstFireDelay = reference.burstFireDelay;
+        guns.bulletXSpawn = reference.bulletXSpawn;
+        guns.bulletYSpawn = reference.bulletYSpawn;
+        DestroyImmediate(reference);
     }
 }
