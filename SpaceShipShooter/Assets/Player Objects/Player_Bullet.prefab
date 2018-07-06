@@ -92,6 +92,8 @@ MonoBehaviour:
   explosion: {fileID: 1062169835156650, guid: c0f82ec3a9d650a41a21d1913ffdf504, type: 2}
   explodes: 1
   Damage: 35
+  speed: 0
+  destroyNow: 1
 --- !u!212 &212295936864984566
 SpriteRenderer:
   m_ObjectHideFlags: 1

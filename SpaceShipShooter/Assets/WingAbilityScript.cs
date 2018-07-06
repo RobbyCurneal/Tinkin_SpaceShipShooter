@@ -9,8 +9,8 @@ public class WingAbilityScript : MonoBehaviour {
     public bool createsObject;
     public Rigidbody2D objectCreated;
     public int amountOfObjects;
-    public int objectXOffset;
-    public int objectYOffset;
+    public float objectXOffset;
+    public float objectYOffset;
     public bool createsObjectAtPosition;
     public bool createsObjectInLine;
     public bool createObjectsInCircle;
@@ -26,6 +26,7 @@ public class WingAbilityScript : MonoBehaviour {
     public Sprite Icon;
     public int cooldown;
     public GameObject coolDownIndicator;
+    public int objectVelocity;
 
     private int deathCooldown;
     private int buttonCooldown;
@@ -37,9 +38,9 @@ public class WingAbilityScript : MonoBehaviour {
         coolDownIndicator.transform.Find("Fill Area").GetComponentInChildren<Image>().sprite = Icon;
         coolDownIndicator.transform.Find("Background").GetComponent<Image>().sprite = Icon;
         if (deathTrigger)
-        {
             deathCooldown = cooldown;
-        }
+        if (buttonTrigger)
+            buttonCooldown = cooldown;
 	}
 	
 	// Update is called once per frame
@@ -48,7 +49,17 @@ public class WingAbilityScript : MonoBehaviour {
         {
             if (createsObject)
             {
-
+                if (createsObjectAtPosition)
+                {
+                    Rigidbody2D createdObject = Instantiate(objectCreated, new Vector2(transform.position.x + objectXOffset, transform.position.y + objectYOffset), transform.rotation) as Rigidbody2D;
+                    createdObject.velocity = new Vector2(0, objectVelocity);
+                    if (amountOfObjects == 2)
+                    {
+                        createdObject = Instantiate(objectCreated, new Vector2(transform.position.x - objectXOffset, transform.position.y + objectYOffset), transform.rotation) as Rigidbody2D;
+                        createdObject.velocity = new Vector2(0, objectVelocity);
+                    }
+                    //Make more robust
+                }
             }
             if (restoresHealth)
             {
@@ -66,6 +77,12 @@ public class WingAbilityScript : MonoBehaviour {
         {
             deathTrigger = true;
         }
+
+        if(buttonCooldown > 0 && buttonCooldown != cooldown)
+        {
+            buttonCooldown++;
+            coolDownIndicator.GetComponent<Slider>().value = (float)buttonCooldown / cooldown;
+        }
 	}
 
     bool IsTriggered()
@@ -79,9 +96,14 @@ public class WingAbilityScript : MonoBehaviour {
         }
         if(!deathTrigger && gameObject.GetComponent<Player_Health>().health <= 0)
             gameObject.GetComponent<Player_Health>().Die();
-        if (buttonTrigger && Input.GetButton("fireSubweapon"))
-            return true;
-
+        if (buttonTrigger && Input.GetButton("FireSubweapon"))
+        {
+            if (buttonCooldown == cooldown)
+            {
+                buttonCooldown = 1;
+                return true;
+            }
+        }
         return false;
     }
 }

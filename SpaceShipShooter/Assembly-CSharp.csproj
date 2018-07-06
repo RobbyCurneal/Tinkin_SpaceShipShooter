@@ -73,6 +73,7 @@
     <Compile Include="Assets\CursedLegion_Core_1_Script.cs" />
     <Compile Include="Assets\CursedLegion_Wing2_Script.cs" />
     <Compile Include="Assets\damage.cs" />
+    <Compile Include="Assets\Description.cs" />
     <Compile Include="Assets\Explosion_Behavior.cs" />
     <Compile Include="Assets\FireGuns.cs" />
     <Compile Include="Assets\KillZone.cs" />
@@ -82,11 +83,15 @@
     <Compile Include="Assets\Player_Health.cs" />
     <Compile Include="Assets\Player1_Movement.cs" />
     <Compile Include="Assets\PlayerBounds.cs" />
+    <Compile Include="Assets\PlayerSpawner.cs" />
+    <Compile Include="Assets\PrefabReplacer.cs" />
     <Compile Include="Assets\QuitGame.cs" />
     <Compile Include="Assets\Ship_Constructor.cs" />
+    <Compile Include="Assets\ShipPrefabReplacer.cs" />
     <Compile Include="Assets\Spawn_Baddie_1.cs" />
     <Compile Include="Assets\SpawnerMovement.cs" />
     <Compile Include="Assets\StartGame.cs" />
+    <Compile Include="Assets\SwapWings.cs" />
     <Compile Include="Assets\TestCollision.cs" />
     <Compile Include="Assets\WingAbilityScript.cs" />
     <Compile Include="Assets\WingOffset.cs" />

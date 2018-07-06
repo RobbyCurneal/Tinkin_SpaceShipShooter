@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 114003629192865438}
   - component: {fileID: 50564364433008616}
   - component: {fileID: 68295156923336694}
+  - component: {fileID: 114413164793074348}
+  - component: {fileID: 114788273131293622}
   m_Layer: 0
   m_Name: CursedLegion_RWing_2_2
   m_TagString: Untagged
@@ -37,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1403557809619358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -61.27, y: 3.81, z: 0}
+  m_LocalPosition: {x: -66.77403, y: 13.145847, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -162,6 +164,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XOffset: 2.1
   YOffset: 0
+--- !u!114 &114413164793074348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1403557809619358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd186da67ed5a284e9c0f40f802f31a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftWing: {fileID: 0}
+  rightWing: {fileID: 0}
+  createsObject: 1
+  objectCreated: {fileID: 50410995178121214, guid: 881fb4e1e53787844bf97987359f19db,
+    type: 2}
+  amountOfObjects: 2
+  objectXOffset: 2.85
+  objectYOffset: 0
+  createsObjectAtPosition: 1
+  createsObjectInLine: 0
+  createObjectsInCircle: 0
+  deathTrigger: 0
+  fireShotsAllAtOnce: 0
+  buttonTrigger: 1
+  droneDeathTrigger: 0
+  paysHealth: 0
+  healthPaid: 0
+  coolsOffGuns: 0
+  restoresHealth: 0
+  healthPrecentageRestored: 0
+  Icon: {fileID: 21300000, guid: 24ff0cec59892d34096812d434ac8c2b, type: 3}
+  cooldown: 240
+  coolDownIndicator: {fileID: 0}
+  objectVelocity: 10
+--- !u!114 &114788273131293622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1403557809619358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59faceb06d86b964f83a4ec5dd678da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDescription: Creates a slow-moving ball of plasma on both sides of the wings.
+    The plasma deals massive damage to anything it touches, and will continue moving
+    even if it has destroyed something. (4 second cooldown)
 --- !u!212 &212609922134394010
 SpriteRenderer:
   m_ObjectHideFlags: 1
